@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html {
+  color-scheme: dark;
+  --aura-accent-color-dark: #10B981;
+  --aura-accent-color-light: #10B981;
+  --aura-background-color-dark: #18181B;
+  --aura-background-color-light: #F4F4F5;
+  --aura-base-size: 18;
+  --aura-content-color-scheme: light;
+  --aura-font-family: 'Inter', var(--aura-font-family-system);
+  --aura-surface-level: -0.5;
+}
+
+vaadin-side-nav-item:not([current]) > vaadin-icon {
+  color: var(--aura-accent-text-color);
+}
+
+vaadin-side-nav-item[current]::part(content) {
+  --vaadin-side-nav-item-background: var(--vaadin-background-container);
+  --vaadin-side-nav-item-border-color: transparent;
+}
+
+vaadin-side-nav::part(label) {
+  text-transform: uppercase;
+  font-size: var(--aura-font-size-xs);
+  color: var(--vaadin-text-color);
+  letter-spacing: 0.03em;
+}
+
+:is(vaadin-button, vaadin-menu-bar-button, vaadin-upload-button):not([theme~="primary"], [theme~="tertiary"]) {
+  --aura-accent-color-light: var(--aura-neutral);
+  --aura-accent-color-dark: var(--aura-neutral);
+  --vaadin-button-background: var(--vaadin-background-container);
+  --vaadin-button-border-color: transparent;
+  --vaadin-button-shadow: none;
+}

@@ -1,0 +1,16 @@
+server.port=8090
+
+# Cloudflare Turnstile - get a sitekey/secret from https://dash.cloudflare.com/?to=/:account/turnstile
+# (Cloudflare's published "always passes" test keys also work: 1x00000000000000000000AA / 1x0000000000000000000000000000000AA)
+captcha.turnstile.site-key=your-site-key
+captcha.turnstile.secret=your-secret
+
+# hCaptcha - get a sitekey/secret from https://dashboard.hcaptcha.com
+# (hCaptcha's published "always passes" test keys also work: 10000000-ffff-ffff-ffff-000000000001 / 0x0000000000000000000000000000000000000)
+captcha.hcaptcha.site-key=your-site-key
+captcha.hcaptcha.secret=your-secret
+
+# Friendly Captcha has no published test keys - replace with real credentials
+# from https://app.friendlycaptcha.com (a free sandbox account works).
+captcha.friendlycaptcha.site-key=your-site-key
+captcha.friendlycaptcha.secret=your-secret
